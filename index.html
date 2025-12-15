@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ویترین جامع | Masterpiece UI Showcase</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    <!-- 1. BACKGROUND ORBS -->
+    <div class="orb-container">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- 2. GLOBAL CONTROLS -->
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="floating-actions">
+    <button class="float-btn" onclick="toggleTheme()" id="theme-toggle" aria-label="Toggle Theme">☀</button>
+    <button class="float-btn" onclick="toggleLanguage()" aria-label="Translate">文</button>
+
+    <!-- 3. Link to another site (use <a> tag) -->
+    <a href="https://github.com/Amkhodaei83/" class="float-btn" target="amkhodaei" aria-label="Go to github">
+        ↗
+    </a>
+</div>
+    <div class="toast-container" id="toast-area"></div>
+
+    <div class="layout-container">
+        
+        <!-- 3. SIDEBAR NAVIGATION -->
+        <aside>
+            <div class="d-flex items-center gap-2 mb-6">
+                <div class="demo-icon" style="background: var(--primary); color: #000;">💎</div>
+                <div>
+                    <h3 class="m-0 text-base">جعبه‌ابزار نهایی</h3>
+                    <p class="text-xs text-muted">نسخه حرفه‌ای (Pro)</p>
+                </div>
+            </div>
+            <ul>
+                <li><a href="#dashboard" class="active">📊 داشبورد و آمار</a></li>
+                <li><a href="#typography">Aa تایپوگرافی و متن</a></li>
+                <li><a href="#buttons">🔘 دکمه‌ها و نشان‌ها</a></li>
+                <li><a href="#forms">📝 فرم‌های پیشرفته</a></li>
+                <li><a href="#tables">📅 جداول (RTL/LTR)</a></li>
+                <li><a href="#feedback">🔔 لودینگ و پیام‌ها</a></li>
+                <li><a href="#cards">🃏 کارت‌های هوشمند</a></li>
+            </ul>
+
+            <!-- System Status (Mixed Lang Demo) -->
+            <div class="card mt-8 p-4" dir="ltr" style="border: 1px dashed var(--border);">
+                <div class="d-flex justify-between items-center mb-2">
+                    <strong>System Health</strong>
+                    <div class="spinner spinner-sm" style="border-top-color: var(--success);"></div>
+                </div>
+                <code class="text-xs text-success">v4.2.0 Stable</code>
+                <div class="mt-2 text-xs text-muted">Server: AWS-Frankfurt</div>
+            </div>
+        </aside>
+
+        <!-- 4. MAIN CONTENT -->
+        <main>
+            
+            <!-- SECTION: HERO / DASHBOARD -->
+            <section id="dashboard" class="mb-8">
+                <h1>خوش آمدید، <span class="text-muted">مدیر سیستم</span></h1>
+                <p class="lead">این صفحه تمام قابلیت‌های <mark>CSS</mark> شما را به نمایش می‌گذارد.</p>
+                
+                <div class="grid grid-4">
+                    <!-- Stat Card 1 -->
+                    <div class="card">
+                        <div class="d-flex justify-between items-center">
+                            <h5 class="m-0">کاربران کل</h5>
+                            <span class="badge badge-primary">↑ 12%</span>
+                        </div>
+                        <h2 class="m-0 mt-2">14,200</h2>
+                        <progress value="70" max="100" class="mt-2"></progress>
+                    </div>
+
+                    <!-- Stat Card 2 -->
+                    <div class="card">
+                        <div class="d-flex justify-between items-center">
+                            <h5 class="m-0">فروش ماهانه</h5>
+                            <span class="badge badge-success">+4%</span>
+                        </div>
+                        <h2 class="m-0 mt-2 text-success">$52,000</h2>
+                        <progress value="45" max="100" class="mt-2"></progress>
+                    </div>
+
+                    <!-- Stat Card 3 (LTR) -->
+                    <div class="card" dir="ltr">
+                        <div class="d-flex justify-between items-center">
+                            <h5 class="m-0">Latency</h5>
+                            <span class="badge badge-warning">High</span>
+                        </div>
+                        <h2 class="m-0 mt-2 text-warning">124ms</h2>
+                        <div class="text-xs text-muted mt-2">Ping to 192.168.1.1</div>
+                    </div>
+
+                    <!-- Stat Card 4 (Interactive) -->
+                    <div class="card d-flex flex-column justify-center items-center cursor-pointer" onclick="openModal()" style="border-style: dashed;">
+                        <span style="font-size: 2rem; color: var(--primary);">+</span>
+                        <span class="font-bold">ویجت جدید</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION: TYPOGRAPHY -->
+            <section id="typography" class="chapter-card">
+                <div class="d-flex justify-between items-end mb-4">
+                    <h2>تایپوگرافی و نگارش</h2>
+                    <kbd>Ctrl + T</kbd>
+                </div>
+                
+                <div class="grid grid-2">
+                    <!-- Column 1: Persian -->
+                    <div>
+                        <h3>سرتیترهای فارسی</h3>
+                        <p>استفاده از فونت وزیرمتن برای خوانایی بالا.</p>
+                        <blockquote>
+                            "طراحی رابط کاربری مثل یک شوخی است؛ اگر مجبور باشید آن را توضیح دهید، یعنی خوب نیست."
+                        </blockquote>
+                        <div class="mt-4">
+                            <span class="text-xs">خیلی کوچک</span> • 
+                            <span class="text-sm">کوچک</span> • 
+                            <span class="text-base">معمولی</span> • 
+                            <span class="text-lg font-bold">بزرگ و ضخیم</span>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: English (LTR) -->
+                    <div dir="ltr">
+                        <h3>English Typography</h3>
+                        <p>Using <code>dir="ltr"</code> switches the font to Inter/System UI automatically.</p>
+                        <pre><code>// Code block sample
+const ui = new UltimateKit();
+ui.init({
+    theme: 'dark',
+    rtl: true
+});</code></pre>
+                        <p>Inline code: <code>npm install masterpiece</code></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION: BUTTONS & BADGES -->
+            <section id="buttons" class="chapter-card">
+                <h2>دکمه‌ها و المان‌های بصری</h2>
+                
+                <!-- Buttons -->
+                <div class="mb-6">
+                    <h4>انواع دکمه‌ها</h4>
+                    <div class="d-flex flex-wrap gap-2">
+                        <button class="btn">اصلی (Primary)</button>
+                        <button class="btn btn-outline">حاشیه (Outline)</button>
+                        <button class="btn btn-success">موفقیت</button>
+                        <button class="btn btn-warning">هشدار</button>
+                        <button class="btn btn-error">خطا</button>
+                        <button class="btn btn-info">اطلاعات</button>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2 mt-4 items-center">
+                        <button class="btn btn-sm">کوچک (SM)</button>
+                        <button class="btn">معمولی</button>
+                        <button class="btn btn-lg">بزرگ (LG)</button>
+                        <button class="btn btn-outline" disabled style="opacity: 0.5; cursor: not-allowed;">غیرفعال</button>
+                    </div>
+                </div>
+
+                <!-- Badges -->
+                <div>
+                    <h4>نشان‌ها (Badges)</h4>
+                    <div class="d-flex flex-wrap gap-2 items-center">
+                        <span class="badge">پیش‌فرض</span>
+                        <span class="badge badge-success">تایید شده</span>
+                        <span class="badge badge-warning">در انتظار</span>
+                        <span class="badge badge-error">رد شده</span>
+                        <span class="badge badge-info">جدید</span>
+                        <span class="badge badge-outline">Outline</span>
+                        <span class="badge badge-lg">بزرگ</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION: FORMS -->
+            <section id="forms" class="chapter-card">
+                <h2>فرم‌های پیشرفته (Inputs)</h2>
+                <div class="grid grid-2">
+                    
+                    <!-- Left: Standard Inputs -->
+                    <div>
+                        <div class="form-group">
+                            <label class="form-label">نام کاربری</label>
+                            <input type="text" placeholder="نام خود را وارد کنید...">
+                        </div>
+                        <div class="grid grid-2" style="margin: 0; gap: 15px;">
+                            <div class="form-group">
+                                <label class="form-label">ایمیل</label>
+                                <input type="email" placeholder="example@mail.com" dir="ltr">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">تلفن</label>
+                                <input type="number" placeholder="0912...">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">آپلود مدارک (Input File)</label>
+                            <input type="file">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">توضیحات</label>
+                            <textarea rows="3" placeholder="پیام خود را بنویسید..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Right: Selection & Sliders -->
+                    <div>
+                        <div class="form-group">
+                            <label class="form-label">استان</label>
+                            <select>
+                                <option>تهران</option>
+                                <option>اصفهان</option>
+                                <option>شیراز</option>
+                            </select>
+                        </div>
+                        
+                        <div class="card p-4 mt-4 mb-4">
+                            <label class="form-label mb-2">تنظیمات ترجیحی</label>
+                            <div class="d-flex gap-4 mb-4">
+                                <label class="checkbox-group">
+                                    <input type="checkbox" checked> خبرنامه
+                                </label>
+                                <label class="checkbox-group">
+                                    <input type="checkbox"> پیامک
+                                </label>
+                            </div>
+                            <div class="d-flex gap-4">
+                                <label class="radio-group">
+                                    <input type="radio" name="g1" checked> مرد
+                                </label>
+                                <label class="radio-group">
+                                    <input type="radio" name="g1"> زن
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">محدوده قیمت (Range)</label>
+                            <input type="range" min="0" max="100" value="75">
+                            <div class="d-flex justify-between text-xs text-muted mt-1">
+                                <span>0 تومان</span>
+                                <span>100 تومان</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- SECTION: TABLES (RTL VS LTR) -->
+            <section id="tables" class="chapter-card">
+                <div class="grid grid-2" style="gap: 40px;">
+                    
+                    <!-- RTL TABLE -->
+                    <div>
+                        <h3>لیست کاربران (RTL)</h3>
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>کاربر</th>
+                                        <th>وضعیت</th>
+                                        <th>عملیات</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>علی رضایی</td>
+                                        <td><span class="badge badge-success">فعال</span></td>
+                                        <td><button class="btn btn-sm btn-outline">ویرایش</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>سارا امینی</td>
+                                        <td><span class="badge badge-warning">انتظار</span></td>
+                                        <td><button class="btn btn-sm btn-outline">ویرایش</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- LTR TABLE -->
+                    <div dir="ltr">
+                        <h3>System Logs (LTR)</h3>
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Error Code</th>
+                                        <th>Severity</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code class="text-error">ERR_500</code></td>
+                                        <td><span class="badge badge-error">Critical</span></td>
+                                        <td><a href="#">View Logs</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code class="text-warning">WARN_401</code></td>
+                                        <td><span class="badge badge-warning">Medium</span></td>
+                                        <td><a href="#">Retry</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- SECTION: FEEDBACK & LOADERS -->
+            <section id="feedback" class="chapter-card">
+                <h2>بازخورد و وضعیت‌ها</h2>
+                
+                <div class="grid grid-2">
+                    <!-- Loaders -->
+                    <div class="card">
+                        <h4>لودرها (Spinners & Skeletons)</h4>
+                        <div class="d-flex items-center gap-4 mb-6">
+                            <div class="spinner"></div>
+                            <div class="spinner spinner-lg"></div>
+                            <div class="spinner spinner-sm"></div>
+                        </div>
+
+                        <!-- Skeleton Example -->
+                        <div class="skeleton-box skeleton p-4 d-flex flex-column justify-end">
+                            <!-- This simulates content loading -->
+                            <div style="background: rgba(0,0,0,0.5); padding: 10px; border-radius: 8px;">
+                                <div class="skeleton skeleton-title"></div>
+                                <div class="skeleton skeleton-text"></div>
+                                <div class="skeleton skeleton-text" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Toasts & Modals Controls -->
+                    <div class="card d-flex flex-column justify-center gap-4">
+                        <h4>کنترل پیام‌ها</h4>
+                        <button class="btn btn-success btn-block" onclick="toast('success')">نمایش پیام موفقیت</button>
+                        <button class="btn btn-warning btn-block" onclick="toast('warning')">نمایش هشدار</button>
+                        <button class="btn btn-error btn-block" onclick="toast('error')">نمایش خطا</button>
+                        <button class="btn btn-info btn-block" onclick="toast('info')">نمایش اطلاعات</button>
+                        <hr style="border-color: var(--border);">
+                        <button class="btn btn-outline btn-block" onclick="openModal()">باز کردن مودال (Modal)</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION: CARDS VARIATIONS -->
+            <section id="cards" class="mb-10">
+                <h2>انواع کارت‌ها</h2>
+                
+                <div class="grid grid-3">
+                    <!-- Standard Card -->
+                    <div class="card">
+                        <span class="badge badge-info">استاندارد</span>
+                        <h4>کارت معمولی</h4>
+                        <p>این یک کارت ساده برای نمایش محتوا است.</p>
+                        <button class="btn btn-sm btn-outline">ادامه مطلب</button>
+                    </div>
+
+                    <!-- Card with Image (using :has(img) CSS logic) -->
+                    <div class="card" style="grid-column: span 2;">
+                        <!-- Placeholder Image -->
+                        <img src="https://picsum.photos/200/200" alt="Demo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                        <div class="d-flex flex-column justify-center">
+                            <h4>کارت تصویر دار (:has)</h4>
+                            <p>این کارت به صورت خودکار تشخیص می‌دهد که تصویر دارد و چیدمان خود را به حالت افقی (Grid) تغییر می‌دهد. این قدرت CSS مدرن است.</p>
+                            <div class="mt-2">
+                                <span class="badge badge-outline">CSS3</span>
+                                <span class="badge badge-outline">Flexbox</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Accordion -->
+                <div class="mt-6">
+                    <details>
+                        <summary>آکاردئون بازشو (کلیک کنید)</summary>
+                        <div class="details-content">
+                            محتوای مخفی در اینجا قرار می‌گیرد. این قابلیت بدون جاوااسکریپت و فقط با HTML/CSS کار می‌کند.
+                        </div>
+                    </details>
+                    <details>
+                        <summary>سوالات متداول دیگر</summary>
+                        <div class="details-content">
+                            پاسخ سوال دوم در اینجا است.
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- 5. MODAL COMPONENT -->
+    <div class="modal-overlay d-none" id="demo-modal">
+        <div class="modal animate-scale-in">
+            <div class="modal-header">
+                <h3 class="modal-title">تنظیمات سیستم</h3>
+                <button class="modal-close" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <p>آیا مطمئن هستید که می‌خواهید تغییرات را ذخیره کنید؟</p>
+                <div class="alert alert-info mt-4 p-3" style="background: rgba(0, 194, 255, 0.1); border-radius: 8px; border: 1px solid var(--info);">
+                    <strong>نکته:</strong> این تغییرات غیرقابل بازگشت هستند.
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" onclick="closeModal()">انصراف</button>
+                <button class="btn btn-primary" onclick="closeModal(); toast('success')">تایید و ذخیره</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. JAVASCRIPT LOGIC -->
+    <script>
+        const translations = {
+        'fa': {
+            // UI Labels
+            'lang_btn': 'EN',
+            'sidebar_title': 'جعبه‌ابزار نهایی',
+            'sidebar_subtitle': 'نسخه حرفه‌ای (Pro)',
+            
+            // Navigation
+            'nav_dashboard': '📊 داشبورد و آمار',
+            'nav_typography': 'Aa تایپوگرافی و متن',
+            'nav_buttons': '🔘 دکمه‌ها و نشان‌ها',
+            'nav_forms': '📝 فرم‌های پیشرفته',
+            'nav_tables': '📅 جداول (RTL/LTR)',
+            'nav_feedback': '🔔 لودینگ و پیام‌ها',
+            'nav_cards': '🃏 کارت‌های هوشمند',
+
+            // Content
+            'welcome': 'خوش آمدید،',
+            'admin': 'مدیر سیستم',
+            'lead_text': 'این صفحه تمام قابلیت‌های CSS شما را به نمایش می‌گذارد.',
+            'stat_users': 'کاربران کل',
+            'stat_sales': 'فروش ماهانه',
+            
+            // Forms
+            'form_title': 'فرم‌های پیشرفته',
+            'label_username': 'نام کاربری',
+            'ph_username': 'نام خود را وارد کنید...' // Placeholder
+        },
+        'en': {
+            // UI Labels
+            'lang_btn': 'فا',
+            'sidebar_title': 'Ultimate Toolkit',
+            'sidebar_subtitle': 'Pro Version',
+
+            // Navigation
+            'nav_dashboard': '📊 Dashboard & Stats',
+            'nav_typography': 'Aa Typography',
+            'nav_buttons': '🔘 Buttons & Badges',
+            'nav_forms': '📝 Advanced Forms',
+            'nav_tables': '📅 Tables',
+            'nav_feedback': '🔔 Loading & Feedback',
+            'nav_cards': '🃏 Smart Cards',
+
+            // Content
+            'welcome': 'Welcome,',
+            'admin': 'System Admin',
+            'lead_text': 'This page showcases all your CSS capabilities.',
+            'stat_users': 'Total Users',
+            'stat_sales': 'Monthly Sales',
+
+            // Forms
+            'form_title': 'Advanced Inputs',
+            'label_username': 'Username',
+            'ph_username': 'Enter your name...' // Placeholder
+        }
+    };
+
+    let currentLang = 'fa'; // Default language
+
+    // 2. TOGGLE FUNCTION
+    function toggleLanguage() {
+        // Switch state
+        currentLang = currentLang === 'fa' ? 'en' : 'fa';
+        
+        // 1. Change HTML Attributes (controls RTL/LTR layout)
+        const htmlTag = document.documentElement;
+        htmlTag.lang = currentLang;
+        htmlTag.dir = currentLang === 'fa' ? 'rtl' : 'ltr';
+
+        // 2. Update Text Content
+        document.querySelectorAll('[data-key]').forEach(element => {
+            const key = element.getAttribute('data-key');
+            if (translations[currentLang][key]) {
+                element.innerText = translations[currentLang][key];
+            }
+        });
+
+        // 3. Update Placeholders (for inputs)
+        document.querySelectorAll('[data-key-placeholder]').forEach(input => {
+            const key = input.getAttribute('data-key-placeholder');
+            if (translations[currentLang][key]) {
+                input.placeholder = translations[currentLang][key];
+            }
+        });
+
+        // 4. Update Button Text
+        document.getElementById('lang-icon').innerText = translations[currentLang]['lang_btn'];
+    }
+
+    // --- KEEP YOUR EXISTING SCRIPTS BELOW ---
+    function toggleTheme() {
+        document.body.classList.toggle('light-mode');
+        document.getElementById('theme-toggle').innerText = document.body.classList.contains('light-mode') ? '☾' : '☀';
+    }
+    function toggleMenu() {
+        document.querySelector('aside').classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+    }
+    
+        // Theme Toggle
+        function toggleTheme() {
+            document.body.classList.toggle('light-mode');
+            const btn = document.querySelector('.theme-toggle');
+            btn.innerText = document.body.classList.contains('light-mode') ? '☾' : '☀';
+        }
+
+        // Menu Toggle
+        function toggleMenu() {
+            document.querySelector('aside').classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        }
+
+        // Modal Logic
+        function openModal() {
+            document.getElementById('demo-modal').classList.remove('d-none');
+        }
+        function closeModal() {
+            document.getElementById('demo-modal').classList.add('d-none');
+        }
+        // Close on overlay click
+        document.getElementById('demo-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'demo-modal') closeModal();
+        });
+
+        // Toast Logic
+        function toast(type) {
+            const container = document.getElementById('toast-area');
+            const toastEl = document.createElement('div');
+            
+            // Define contents based on type
+            let icon = 'ℹ';
+            let title = 'اطلاعیه';
+            let msg = 'این یک پیام نمونه است.';
+
+            if(type === 'success') { icon = '✓'; title = 'موفقیت'; msg = 'عملیات با موفقیت انجام شد.'; }
+            if(type === 'error') { icon = '✕'; title = 'خطا'; msg = 'ارتباط با سرور برقرار نشد.'; }
+            if(type === 'warning') { icon = '⚠'; title = 'هشدار'; msg = 'فضای دیسک رو به اتمام است.'; }
+
+            // Add LTR for specific demo if needed, otherwise default
+            toastEl.className = `toast toast-${type}`;
+            toastEl.innerHTML = `
+                <div class="toast-icon">${icon}</div>
+                <div class="toast-content">
+                    <div class="toast-title">${title}</div>
+                    <div class="toast-message">${msg}</div>
+                </div>
+                <button class="toast-close" onclick="this.parentElement.remove()">×</button>
+            `;
+
+            container.appendChild(toastEl);
+            setTimeout(() => {
+                toastEl.style.opacity = '0';
+                toastEl.style.transform = 'translateX(50px)';
+                setTimeout(() => toastEl.remove(), 300);
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
