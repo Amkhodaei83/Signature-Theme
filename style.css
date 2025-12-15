@@ -458,18 +458,42 @@ body.light-mode blockquote {
 .grid-4 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
 
 .card {
-    background: rgba(255,255,255,0.03);
+    position: relative; 
+    background: rgba(255,255,255,0.15);
     border: 1px solid var(--border);
     padding: 25px;
     border-radius: 16px;
     transition: 0.3s;
+}
+.card:has(> .badge),
+.card:has(> .card-actions) {
+    padding-top: 45px; /* Adds breathing room so text doesn't hit the badge */
+}
+.card > .badge {
+    position: absolute;
+    top: 15px;
+    /* LOGICAL PROPERTY: Switches left/right automatically based on dir="" */
+    inset-inline-end: 15px; 
+    z-index: 2;
+}
+
+/* 4. Handle Multiple Badges (The Wrapper) */
+.card-actions {
+    position: absolute;
+    top: 15px;
+    /* LOGICAL PROPERTY: Switches left/right automatically */
+    inset-inline-end: 15px;
+    display: flex;
+    gap: 8px; /* Space between badges */
+    align-items: center;
+    z-index: 2;
 }
 body.light-mode .card {
     background: rgba(255,255,255,0.5);
 }
 .card:hover {
     border-color: var(--primary);
-    background: rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.2);
     transform: translateY(-5px);
 }
 /* ADD HERE: Smart Card Variations */
@@ -479,16 +503,6 @@ body.light-mode .card {
     gap: 20px;
 }
 
-.card:has(.badge) {
-    padding-top: 35px;
-    position: relative;
-}
-
-.card:has(.badge) .badge {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-}
 
 /* ==========================================================================
    8. FORMS & UI ELEMENTS
@@ -1306,30 +1320,53 @@ body.light-mode .skeleton {
 }
 
 /* ==========================================================================
-   19. THEME TOGGLE
+   19. FLOATING ACTION BUTTONS (Refactored)
    ========================================================================== */
-.theme-toggle {
+.floating-actions {
     position: fixed;
-    bottom: 30px; left: 30px;
-    width: 50px; height: 50px;
+    bottom: 30px; 
+    left: 30px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row; /* Aligns buttons horizontally */
+    gap: 15px;           /* Space between the buttons */
+}
+
+.float-btn {
+    width: 50px; 
+    height: 50px;
     border-radius: 50%;
+    
+    /* Your Signature Glass Style */
     background: var(--bg-glass);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border: 1px solid var(--border);
     color: var(--text-main);
-    display: flex; align-items: center; justify-content: center;
-    cursor: pointer;
-    z-index: 1000;
-    font-size: 1.5rem;
     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    
+    /* Centering Icons */
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    
+    cursor: pointer;
+    font-size: 1.5rem;
     transition: 0.3s;
+    text-decoration: none; /* In case you use <a> tags */
 }
 
-.theme-toggle:hover {
+/* Hover Effect (Applies to all buttons) */
+.float-btn:hover {
     transform: scale(1.1) rotate(15deg);
     border-color: var(--primary);
     color: var(--primary);
+    box-shadow: 0 0 15px var(--primary-glow);
+}
+
+/* Optional: Specific override if you want the Translate button to look slightly different */
+.float-btn.btn-translate:hover {
+    /* Example: border-color: var(--success); */
 }
 
 /* ==========================================================================
@@ -1429,8 +1466,18 @@ body.light-mode .skeleton {
     h1 { font-size: 1.6rem; }
     h2 { font-size: 1.3rem; }
     h3 { font-size: 1.1rem; }
-    
-    .theme-toggle { bottom: 20px; left: 20px; width: 45px; height: 45px; }
+
+    .floating-actions { 
+    bottom: 20px; 
+    left: 20px; 
+    gap: 10px; 
+    }
+
+    .float-btn { 
+    width: 45px; 
+    height: 45px; 
+    font-size: 1.2rem;
+    }
     
     .toast-container {
         left: 10px;
@@ -1498,7 +1545,7 @@ body.light-mode input[type="number"]::-webkit-outer-spin-button {
    23. PRINT STYLES
    ========================================================================== */
 @media print {
-    .orb-container, .theme-toggle, .menu-toggle, aside, .toast-container, .modal-overlay { display: none !important; }
+    .orb-container, .floating-actions , .menu-toggle, aside, .toast-container, .modal-overlay { display: none !important; }
     body { background: #fff !important; color: #000 !important; }
     .layout-container { display: block; width: 100%; padding: 0; }
     .chapter-card { 
@@ -1633,7 +1680,7 @@ a:focus-visible {
    ========================================================================== */
 
 /* 1. Flip Theme Toggle to the Right side for English */
-[dir="ltr"] .theme-toggle {
+[dir="ltr"] .floating-actions {
     left: auto;
     right: 30px;
 }
