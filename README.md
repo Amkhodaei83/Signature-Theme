@@ -153,13 +153,13 @@ The fastest way to deploy the framework is via the jsDelivr CDN. This serves the
 
 Insert the following `<link>` tags into the `<head>` of your HTML document:
 
-
+```html
 <!-- 1. Vazirmatn Font (Required for Persian typography) -->
 <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.0.3/misc/Farsi-Digits/font-face.css" rel="stylesheet" type="text/css">
 
 <!-- 2. Signature Theme Core CSS (Latest Release: v0.11) -->
 <link href="https://cdn.jsdelivr.net/gh/Amkhodaei83/Signature-Theme@0.11/style.css" rel="stylesheet" type="text/css">
-
+```
 
 ### Core Configuration Variables
 
@@ -185,21 +185,20 @@ The framework listens to the `dir` attribute on the `<html>` tag to automaticall
 
 **For Persian/Arabic (RTL):**
 
+```html
 <html lang="fa" dir="rtl">
 <!-- The framework will automatically push sidebars to the right and align text right -->
-
-
+```
 **For English/Latin (LTR):**
-
+```html
 <html lang="en" dir="ltr">
 <!-- The framework will auto-swap the sidebar to the left and apply Inter font -->
-
-
+```
 ### 2. The Smart Card Component
 
 Signature Theme uses the modern CSS `:has()` pseudo-class to create intelligent, context-aware components. For instance, if you add an `<img>` inside a `.card`, the CSS automatically alters the internal layout into a dual-column grid without requiring extra modifier classes.
 
-
+```html
 <!-- Standard Text Card -->
 <div class="card">
     <span class="badge badge-info">Standard</span>
@@ -215,13 +214,13 @@ Signature Theme uses the modern CSS `:has()` pseudo-class to create intelligent,
         <p>The CSS :has(img) selector triggered a layout shift automatically!</p>
     </div>
 </div>
-
+```
 
 ### 3. Activating the Theme Toggle (Light/Dark Mode)
 
 Dark mode is the default state. To trigger the "Ceramic" Light Mode, simply toggle the `.light-mode` class on the `<body>` element. All CSS variables will instantly cascade to their new values.
 
-
+```html
 <!-- HTML Button -->
 <button class="btn btn-outline" onclick="toggleTheme()">Toggle Theme</button>
 
@@ -231,7 +230,7 @@ function toggleTheme() {
     document.body.classList.toggle('light-mode');
 }
 </script>
-
+```
 
 
 
