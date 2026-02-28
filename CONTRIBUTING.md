@@ -14,7 +14,7 @@ Signature Theme is a **zero-dependency vanilla CSS framework**.
 Fork the repository to your GitHub account and clone it locally:
 \\\ash
 git clone https://github.com/YOUR_USERNAME/Signature-Theme.git
-cd Signature-Theme
+cd signature-css-framework
 \\\
 
 ### 2. Branching Strategy

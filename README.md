@@ -255,7 +255,7 @@ By utilizing the MIT License, Signature Theme ensures that you can freely use, m
 
 **AMIR HOSSEIN KHODAEI**
 * **GitHub:** [@amir-hossein-khodaei](https://github.com/amir-hossein-khodaei)
-* **Email:** [amkhosseinststeam@gmail.com](mailto:amkhosseinststeam@gmail.com)
+* **Email:** [amkhossein@gmail.com](mailto:amkhossein@gmail.com)
 
 If you have questions, run into issues, or want to discuss structural improvements to the framework, the best way to reach out is by [opening an issue](https://github.com/amir-hossein-khodaei/signature-css-framework/issues) on this repository.
 
