@@ -8,13 +8,13 @@
   <br><br>
 
   <!-- GitHub SEO: Badges with descriptive alt text for search indexing -->
-  <a href="https://github.com/Amkhodaei83/Signature-Theme/releases">
-    <img src="https://img.shields.io/github/v/release/Amkhodaei83/Signature-Theme?style=for-the-badge&color=00C2FF" alt="GitHub Latest Release Version 0.11" />
+  <a href="https://github.com/amir-hossein-khodaei/signature-css-framework/releases">
+    <img src="https://img.shields.io/github/v/release/amir-hossein-khodaei/signature-css-framework?style=for-the-badge&color=00C2FF" alt="GitHub Latest Release Version 0.11" />
   </a>
-  <a href="https://cdn.jsdelivr.net/gh/Amkhodaei83/Signature-Theme@0.11/style.css">
+  <a href="https://cdn.jsdelivr.net/gh/amir-hossein-khodaei/signature-css-framework@0.11/style.css">
     <img src="https://img.shields.io/badge/CDN-jsDelivr-E84D3D?style=for-the-badge&logo=jsdelivr&logoColor=white" alt="jsDelivr CDN Availability" />
   </a>
-  <a href="https://github.com/Amkhodaei83/Signature-Theme/blob/main/LICENSE">
+  <a href="https://github.com/amir-hossein-khodaei/signature-css-framework/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/License-MIT-00ff88?style=for-the-badge" alt="MIT Open Source License" />
   </a>
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="Built entirely with Modern CSS3" />
@@ -23,10 +23,10 @@
   <br><br>
 
   <!-- Action Buttons -->
-  <a href="https://amkhodaei83.github.io/Signature-Theme/">
+  <a href="https://amkhodaei83.github.io/signature-css-framework/">
     <img src="https://img.shields.io/badge/View_Live_Demo-050507?style=for-the-badge&logo=google-chrome&logoColor=00C2FF&border=00C2FF" alt="View Live Interactive Demo of Signature Theme" />
   </a>
-  <a href="https://github.com/Amkhodaei83/Signature-Theme/issues">
+  <a href="https://github.com/amir-hossein-khodaei/signature-css-framework/issues">
     <img src="https://img.shields.io/badge/Report_A_Bug-050507?style=for-the-badge&logo=github&logoColor=ff3366" alt="Report a bug or request a feature via GitHub Issues" />
   </a>
 
@@ -103,7 +103,7 @@ This framework strictly adheres to web standards, ensuring maximum compatibility
 
 Experience the framework in real-time. The live showcase demonstrates all components, layout shifts, and thematic changes without any page reloads.
 
-**[🌐 View Live Interactive Demo](https://amkhodaei83.github.io/Signature-Theme/)**
+**[🌐 View Live Interactive Demo](https://amkhodaei83.github.io/signature-css-framework/)**
 
 <div align="center">
   <!-- REPLACE: path/to/your/preview-gif-or-image.gif -->
@@ -158,7 +158,7 @@ Insert the following `<link>` tags into the `<head>` of your HTML document:
 <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.0.3/misc/Farsi-Digits/font-face.css" rel="stylesheet" type="text/css">
 
 <!-- 2. Signature Theme Core CSS (Latest Release: v0.11) -->
-<link href="https://cdn.jsdelivr.net/gh/Amkhodaei83/Signature-Theme@0.11/style.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.jsdelivr.net/gh/amir-hossein-khodaei/signature-css-framework@0.11/style.css" rel="stylesheet" type="text/css">
 ```
 
 ### Core Configuration Variables
@@ -254,13 +254,13 @@ By utilizing the MIT License, Signature Theme ensures that you can freely use, m
 ### Maintainer
 
 **AMIR HOSSEIN KHODAEI**
-* **GitHub:** [@Amkhodaei83](https://github.com/Amkhodaei83)
+* **GitHub:** [@amir-hossein-khodaei](https://github.com/amir-hossein-khodaei)
 * **Email:** [amkhosseinststeam@gmail.com](mailto:amkhosseinststeam@gmail.com)
 
-If you have questions, run into issues, or want to discuss structural improvements to the framework, the best way to reach out is by [opening an issue](https://github.com/Amkhodaei83/Signature-Theme/issues) on this repository.
+If you have questions, run into issues, or want to discuss structural improvements to the framework, the best way to reach out is by [opening an issue](https://github.com/amir-hossein-khodaei/signature-css-framework/issues) on this repository.
 
 ### Project Link
-[https://github.com/Amkhodaei83/Signature-Theme](https://github.com/Amkhodaei83/Signature-Theme)
+[https://github.com/amir-hossein-khodaei/signature-css-framework](https://github.com/amir-hossein-khodaei/signature-css-framework)
 
 ### Acknowledgments
 
